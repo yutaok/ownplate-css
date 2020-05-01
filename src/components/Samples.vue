@@ -1,25 +1,17 @@
 <template>
-  <div class="hello">
-    <h1>Samples!</h1>
-    <p>This is sample page.</p>
-
-    <div>
-      Hi
-      <b-icon icon="menu-down" size="is-small"></b-icon>
-    </div>
-
-    <i class="material-icons md-18">face</i>
-    <i class="material-icons md-24">face</i>
-    <i class="material-icons md-36">face</i>
+  <div>
+    <i class="material-icons s-18">face</i>
+    <i class="material-icons s-24">face</i>
+    <i class="material-icons s-36">face</i>
 
     <div>
       <span class="bg op-primary row inline">
-        <i class="material-icons md-24">fingerprint</i>
+        <i class="material-icons s-24">fingerprint</i>
         <span class="m-l-8">This is fingerpring</span>
       </span>
       <div></div>
     </div>
-
+    <div class="t-h4">Hi, This is text style test! Again</div>
     <div class="columns is-gapless op-status-red">Hello</div>
     <div class="columns is-gapless">
       <div class="column">
@@ -70,19 +62,17 @@
       </div>
       <div
         class="inline bg-status-red-bg c-status-red p-l-16 p-r-16 p-t-4 p-b-4 t-subtitle2 r-32"
-      >
-        Order Placed kjyavkuy sgf uvtvciuytv IEW
-      </div>
+      >Order Placed kjyavkuy sgf uvtvciuytv IEW</div>
       <div class="t-h6 c-text-black-medium m-b-8">Your restaurants</div>
       <div class="border-primary r-8 p-t-16 p-b-16 w-440">
         <div class="c-primary t-body1 m-b-8 align-center">
-          Please create restaurant from <br />
-          the button below
+          Please create restaurant from
+          <br />the button below
         </div>
         <div class="align-center">
           <div class="button bg-form r-36 p-l-16 p-r-16">
             <i class="material-icons md-18 m-r-8 c-primary">add</i>
-            <span class=" t-button c-primary">Add Restaurant</span>
+            <span class="t-button c-primary">Add Restaurant</span>
           </div>
         </div>
       </div>
@@ -92,8 +82,6 @@
 
 <script>
 export default {
-  name: "Samples",
+  name: "Samples"
 };
 </script>
-
-<style lang="scss"></style>

@@ -173,7 +173,7 @@ $sides: (top, bottom, left, right);
 
 // Icon Sizes
 @each $icon-size in $sizes {
-  .material-icons.md-#{$icon-size} {
+  .material-icons.s-#{$icon-size} {
     font-size: #{$icon-size}px;
   }
 }
