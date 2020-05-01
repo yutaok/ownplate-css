@@ -1,6 +1,7 @@
 // Reset Buefy and Bulma
 .button {
   padding: 0;
+  background-color: transparent;
   border: none;
 }
 
@@ -51,12 +52,22 @@
   line-height: 24px;
   letter-spacing: 0.1px;
 }
+.t-body1 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
 .t-button {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 1.25px;
   text-transform: uppercase;
+}
+
+.align-center {
+  text-align: center;
 }
 
 // OwnPlate Colors
@@ -119,9 +130,12 @@ $colors: (
   border: 2px solid map-get($colors, primary);
   box-sizing: border-box;
 }
+.button.border-primary:hover {
+  border: 2px solid map-get($colors, primary);
+}
 
 // OwnPlate Sizes
-$sizes: (0, 4, 8, 16, 18, 24, 32, 36, 48, 64, 128, 192, 256);
+$sizes: (0, 4, 8, 16, 18, 24, 32, 36, 48, 64, 128, 192, 256, 440);
 
 // Margin and Padding Sizes
 $sides: (top, bottom, left, right);
@@ -164,7 +178,7 @@ $sides: (top, bottom, left, right);
   }
 }
 
-// Status
-.status {
+// Display Styles
+.inline {
   display: inline-block;
 }

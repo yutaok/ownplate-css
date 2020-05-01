@@ -57,19 +57,34 @@
       <div class="button bg-primary d-low h-48 r-48 w-128">
         <span class="t-subtitle1 c-onprimary">Next</span>
       </div>
-      <div class="bg-primary p-t-32 p-b-32">
+
+      <div class="bg-ownplate-gray p-t-32 p-b-32">
+        <div class="button border-primary r-48 h-48 w-192">
+          <span class="t-subtitle1 c-primary">Edit Page</span>
+        </div>
         <div class="button bg-sattle-white r-36 p-l-8 p-r-8">
           <i class="material-icons md-18 m-r-8 c-text-white-full">language</i>
           <span class="c-text-white-high t-subtitle2">English (US)</span>
-          <i class="material-icons md-18 c-text-black-medium"
-            >arrow_drop_down</i
-          >
+          <i class="material-icons md-18 c-text-white-high">arrow_drop_down</i>
         </div>
       </div>
       <div
-        class="status bg-status-red-bg c-status-red p-l-16 p-r-16 p-t-4 p-b-4 t-subtitle2 r-32"
+        class="inline bg-status-red-bg c-status-red p-l-16 p-r-16 p-t-4 p-b-4 t-subtitle2 r-32"
       >
         Order Placed kjyavkuy sgf uvtvciuytv IEW
+      </div>
+      <div class="t-h6 c-text-black-medium m-b-8">Your restaurants</div>
+      <div class="border-primary r-8 p-t-16 p-b-16 w-440">
+        <div class="c-primary t-body1 m-b-8 align-center">
+          Please create restaurant from <br />
+          the button below
+        </div>
+        <div class="align-center">
+          <div class="button bg-form r-36 p-l-16 p-r-16">
+            <i class="material-icons md-18 m-r-8 c-primary">add</i>
+            <span class=" t-button c-primary">Add Restaurant</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
