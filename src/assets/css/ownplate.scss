@@ -105,6 +105,10 @@ $colors: (
   status-purple-bg: rgba(74, 20, 140, 0.1),
 );
 
+html {
+  background-color: map-get($colors, background);
+}
+
 // Text and Background Colors
 @each $name, $value in $colors {
   // Text Colors
