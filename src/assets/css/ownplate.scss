@@ -4,6 +4,9 @@
   background-color: transparent;
   border: none;
 }
+.columns.is-gapless:not(:last-child) {
+  margin-bottom: 0;
+}
 
 // Text Styles
 .t-h1 {
@@ -58,6 +61,12 @@
   line-height: 24px;
   letter-spacing: 0.5px;
 }
+.t-body2 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
 .t-button {
   font-weight: 500;
   font-size: 14px;
@@ -65,13 +74,31 @@
   letter-spacing: 1.25px;
   text-transform: uppercase;
 }
+.t-caption {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+.t-overline {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
 
 .align-center {
   text-align: center;
 }
+.align-right {
+  text-align: right;
+}
 
 // OwnPlate Colors
 $colors: (
+  test: #ff0000,
   ownplate-yellow: #fbc02d,
   ownplate-gray: #616161,
   ownplate-white: #ffffff,
@@ -182,7 +209,23 @@ $sides: (top, bottom, left, right);
   }
 }
 
-// Display Styles
-.inline {
-  display: inline-block;
+// Push footer down to the bottom
+body,
+#app,
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main {
+  flex: 1;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+.cover {
+  object-fit: cover;
 }
