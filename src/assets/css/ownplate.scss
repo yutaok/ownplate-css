@@ -8,6 +8,30 @@
   margin-bottom: 0;
 }
 
+.columns,
+.column {
+  margin: 0;
+  padding: 0;
+}
+
+.box:not(:last-child),
+.content:not(:last-child),
+.notification:not(:last-child),
+.progress:not(:last-child),
+.table:not(:last-child),
+.table-container:not(:last-child),
+.title:not(:last-child),
+.subtitle:not(:last-child),
+.block:not(:last-child),
+.highlight:not(:last-child),
+.breadcrumb:not(:last-child),
+.level:not(:last-child),
+.list:not(:last-child),
+.message:not(:last-child),
+.tabs:not(:last-child) {
+  margin-bottom: 0;
+}
+
 // Text Styles
 .t-h1 {
   font-weight: 300;
@@ -153,7 +177,7 @@ html {
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 }
 .d-low {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 // Border Styles
@@ -166,7 +190,7 @@ html {
 }
 
 // OwnPlate Sizes
-$sizes: (0, 4, 8, 16, 18, 24, 32, 36, 48, 64, 128, 192, 256, 440);
+$sizes: (0, 4, 8, 16, 18, 24, 32, 36, 48, 64, 96, 128, 160, 192, 256, 440);
 
 // Margin and Padding Sizes
 $sides: (top, bottom, left, right);
@@ -201,6 +225,11 @@ $sides: (top, bottom, left, right);
     border-radius: #{$corner-size}px;
   }
 }
+// To make the bottom rounded corners sharp.
+.r-b-0 {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
 
 // Icon Sizes
 @each $icon-size in $sizes {
@@ -226,6 +255,70 @@ body,
 .w-full {
   width: 100%;
 }
+
+// Cover Photo
 .cover {
   object-fit: cover;
+}
+
+// Flex Box
+.cols {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.touchable {
+  cursor: pointer;
+}
+
+// OwnPlate Status
+.op-status {
+  display: inline-block;
+  @extend .p-t-4;
+  @extend .p-b-4;
+  @extend .p-l-16;
+  @extend .p-r-16;
+  @extend .r-32;
+  @extend .t-subtitle2;
+}
+
+// OwnPlate Buttons
+.op-button {
+  cursor: pointer;
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+}
+
+.op-button-text {
+  @extend .op-button;
+  @extend .p-l-8;
+  @extend .p-r-8;
+  .material-icons {
+    @extend .s-18;
+    @extend .m-r-8;
+  }
+  span {
+    @extend .t-button;
+  }
+  @extend .c-primary;
+}
+
+.op-button-pill {
+  @extend .op-button;
+
+  @extend .r-36;
+  @extend .p-l-16;
+  @extend .p-r-16;
+  @extend .c-primary;
+  .material-icons {
+    @extend .s-18;
+  }
+  span {
+    @extend .m-l-8;
+    @extend .m-r-8;
+    @extend .t-button;
+  }
 }
