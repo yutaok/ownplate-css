@@ -119,7 +119,7 @@
               <div class="t-h6 c-text-black-disabled m-t-24">Most popular</div>
 
               <!-- Menu Item -->
-              <div class="touchable bg-surface r-8 d-low m-t-8">
+              <div class="touchable bg-surface r-8 d-low m-t-8" @click="isCardModalActive = true">
                 <div class="cols">
                   <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
                     <div class="t-h6 c-text-black-high">Kushikatsu Special Platter</div>
@@ -138,6 +138,32 @@
                   </div>
                 </div>
               </div>
+              <!-- Menu Item Popup-->
+              <b-modal :active.sync="isCardModalActive" scroll="keep">
+                <div class="p-l-24 p-r-24">
+                  <div class="op-dialog">
+                    <div class="cols">
+                      <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
+                        <div class="t-h6 c-text-black-high">Kushikatsu Special Platter</div>
+                        <div class="t-body1 c-text-black-high m-t-8">$26.00</div>
+                        <div
+                          class="t-body2 c-text-black-medium m-t-8"
+                        >11 pieces assorted kushikatsu. Served with miso soup and salad.</div>
+                      </div>
+                      <div class="p-r-16 p-t-16 p-b-16">
+                        <img
+                          src="@/assets/contents/r-taku-item-1.png"
+                          width="96"
+                          height="96"
+                          class="is-pulled-right r-4"
+                        />
+                      </div>
+                    </div>
+                    <hr class="devider m-l-16 m-r-16 m-t-0 m-b-0" />
+                    <div class="op-button-pill" @click="isCardModalActive = false">Close</div>
+                  </div>
+                </div>
+              </b-modal>
 
               <!-- Menu Item -->
               <div class="touchable bg-surface r-8 d-low m-t-8">
@@ -222,6 +248,11 @@
 
 <script>
 export default {
-  name: "SampleUserRestaurant"
+  name: "SampleUserRestaurant",
+  data() {
+    return {
+      isCardModalActive: false
+    };
+  }
 };
 </script>

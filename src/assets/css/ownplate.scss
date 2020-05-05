@@ -1,3 +1,39 @@
+// OwnPlate Colors
+$colors: (
+  test: #ff0000,
+  ownplate-yellow: #fbc02d,
+  ownplate-gray: #616161,
+  ownplate-white: #ffffff,
+  ownplate-black: #000000,
+  background: #faf9f9,
+  surface: #ffffff,
+  sattle-white: rgba(255, 255, 255, 0.1),
+  sattle-black: rgba(0, 0, 0, 0.1),
+  dialog-overlay: rgba(0, 0, 0, 0.5),
+  primary: #0097a7,
+  primary-bg: rgba(0, 151, 167, 0.1),
+  onprimary: #ffffff,
+  text-black-full: #000000,
+  text-black-high: rgba(0, 0, 0, 0.87),
+  text-black-medium: rgba(0, 0, 0, 0.6),
+  text-black-disabled: rgba(0, 0, 0, 0.38),
+  text-white-full: #ffffff,
+  text-white-high: rgba(255, 255, 255, 0.87),
+  text-white-medium: rgba(255, 255, 255, 0.6),
+  text-white-disable: rgba(255, 255, 255, 0.38),
+  form: rgba(0, 0, 0, 0.05),
+  status-red: #b00020,
+  status-red-bg: rgba(176, 0, 32, 0.1),
+  status-amber: #f57c00,
+  status-amber-bg: rgba(245, 124, 0, 0.1),
+  status-green: #689f38,
+  status-green-bg: rgba(104, 159, 56, 0.1),
+  status-blue: #0288d1,
+  status-blue-bg: rgba(2, 136, 209, 0.1),
+  status-purple: #4a148c,
+  status-purple-bg: rgba(74, 20, 140, 0.1),
+);
+
 // Reset Buefy and Bulma
 .button {
   padding: 0;
@@ -120,42 +156,6 @@
   text-align: right;
 }
 
-// OwnPlate Colors
-$colors: (
-  test: #ff0000,
-  ownplate-yellow: #fbc02d,
-  ownplate-gray: #616161,
-  ownplate-white: #ffffff,
-  ownplate-black: #000000,
-  background: #faf9f9,
-  surface: #ffffff,
-  sattle-white: rgba(255, 255, 255, 0.1),
-  sattle-black: rgba(0, 0, 0, 0.1),
-  dialog-overlay: rgba(0, 0, 0, 0.5),
-  primary: #0097a7,
-  primary-bg: rgba(0, 151, 167, 0.1),
-  onprimary: #ffffff,
-  text-black-full: #000000,
-  text-black-high: rgba(0, 0, 0, 0.87),
-  text-black-medium: rgba(0, 0, 0, 0.6),
-  text-black-disabled: rgba(0, 0, 0, 0.38),
-  text-white-full: #ffffff,
-  text-white-high: rgba(255, 255, 255, 0.87),
-  text-white-medium: rgba(255, 255, 255, 0.6),
-  text-white-disable: rgba(255, 255, 255, 0.38),
-  form: rgba(0, 0, 0, 0.05),
-  status-red: #b00020,
-  status-red-bg: rgba(176, 0, 32, 0.1),
-  status-amber: #f57c00,
-  status-amber-bg: rgba(245, 124, 0, 0.1),
-  status-green: #689f38,
-  status-green-bg: rgba(104, 159, 56, 0.1),
-  status-blue: #0288d1,
-  status-blue-bg: rgba(2, 136, 209, 0.1),
-  status-purple: #4a148c,
-  status-purple-bg: rgba(74, 20, 140, 0.1),
-);
-
 html {
   background-color: map-get($colors, background);
 }
@@ -268,9 +268,11 @@ body,
 .flex-1 {
   flex: 1;
 }
-
 .touchable {
   cursor: pointer;
+}
+.devider {
+  border-top: 1px solid map-get($colors, sattle-black);
 }
 
 // OwnPlate Status
@@ -308,7 +310,6 @@ body,
 
 .op-button-pill {
   @extend .op-button;
-
   @extend .r-36;
   @extend .p-l-16;
   @extend .p-r-16;
@@ -320,5 +321,25 @@ body,
     @extend .m-l-8;
     @extend .m-r-8;
     @extend .t-button;
+  }
+}
+
+// OwnPlate Dialog
+.modal-background {
+  background-color: map-get($colors, dialog-overlay);
+}
+.op-dialog {
+  max-width: 440px;
+  margin: auto;
+  @extend .r-8;
+  @extend .bg-surface;
+  @extend .d-medium;
+}
+.modal-content {
+  max-height: calc(100vh - 128px);
+}
+@media screen and (max-width: 768px) {
+  .modal-content {
+    max-height: calc(100vh - 256px);
   }
 }

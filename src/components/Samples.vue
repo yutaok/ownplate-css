@@ -21,6 +21,9 @@
       <router-link to="/sample-buttons">
         <div class="button bg-primary-bg p-l-16 p-r-16">Buttons</div>
       </router-link>
+      <router-link to="/sample-modals">
+        <div class="button bg-primary-bg p-l-16 p-r-16">Modals</div>
+      </router-link>
     </div>
 
     <!-- Footer -->

@@ -4,6 +4,7 @@ import Router from "vue-router";
 import Samples from "./components/Samples";
 import SampleUserRestaurant from "./components/SampleUserRestaurant";
 import SampleButtons from "./components/SampleButtons";
+import SampleModals from "./components/SampleModals";
 
 Vue.use(Router);
 
@@ -21,6 +22,10 @@ export default new Router({
     {
       path: "/sample-buttons",
       component: SampleButtons,
+    },
+    {
+      path: "/sample-modals",
+      component: SampleModals,
     },
   ],
 });
