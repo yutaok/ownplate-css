@@ -159,7 +159,35 @@
                         />
                       </div>
                     </div>
-                    <hr class="devider m-l-16 m-r-16 m-t-0 m-b-0" />
+
+                    <div class="m-l-16 m-r-16">
+                      <hr class="devider m-t-0 m-b-0" />
+                      <div class="m-t-16">
+                        <div class="t-caption c-text-black-medium">Options</div>
+                        <ul>
+                          <li>
+                            <div class="button">
+                              <i class="material-icons">add</i>
+                              <span>Add</span>
+                            </div>
+                          </li>
+                          <li>
+                            <b-checkbox>Basic</b-checkbox>
+                          </li>
+                          <li>
+                            <b-checkbox>Basic</b-checkbox>
+                          </li>
+                          <li>
+                            <ul>
+                              <li>Miso Soup</li>
+                              <li>Chiken Soup</li>
+                            </ul>
+                          </li>
+                          <li>Gluten Free</li>
+                        </ul>
+                      </div>
+                    </div>
+
                     <div class="op-button-pill" @click="isCardModalActive = false">Close</div>
                   </div>
                 </div>

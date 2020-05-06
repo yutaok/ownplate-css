@@ -343,3 +343,10 @@ body,
     max-height: calc(100vh - 256px);
   }
 }
+
+.b-checkbox.checkbox input[type="checkbox"] + .check {
+  border: 2px solid map-get($colors, text-black-medium);
+}
+.b-checkbox.checkbox input[type="checkbox"]:checked + .check {
+  background-color: map-get($colors, primary);
+}
