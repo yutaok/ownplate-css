@@ -284,6 +284,16 @@
       </div>
     </div>
 
+    <div class="op-cartbutton">
+      <div class="level is-mobile w-full p-l-32 p-r-32">
+        <div class="level-left">3items</div>
+        <div class="level-right">
+          <span class="m-r-8">View Cart</span>
+          <i class="material-icons">shopping_cart</i>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <div class="m-t-24">
       <div class="bg-ownplate-gray columns is-gapless is-mobile h-128">

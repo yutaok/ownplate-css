@@ -190,7 +190,26 @@ html {
 }
 
 // OwnPlate Sizes
-$sizes: (0, 4, 8, 16, 18, 24, 32, 36, 48, 64, 96, 128, 160, 192, 256, 288, 440);
+$sizes: (
+  0,
+  4,
+  8,
+  16,
+  18,
+  24,
+  32,
+  36,
+  48,
+  64,
+  80,
+  96,
+  128,
+  160,
+  192,
+  256,
+  288,
+  440
+);
 
 // Margin and Padding Sizes
 $sides: (top, bottom, left, right);
@@ -367,6 +386,26 @@ body,
     @extend .bg-form;
     @extend .c-text-black-medium;
   }
+}
+
+.op-cartbutton {
+  cursor: pointer;
+  display: inline-flex;
+  // display: inline-flex;
+  // min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  @extend .w-288;
+  @extend .h-80;
+  @extend .r-80;
+  @extend .d-medium;
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  margin-left: -144px;
+  @extend .bg-primary;
+  @extend .c-onprimary;
+  @extend .t-h6;
 }
 
 .control-label {
