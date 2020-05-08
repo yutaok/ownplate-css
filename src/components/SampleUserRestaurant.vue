@@ -3,7 +3,7 @@
     <!-- Header -->
     <div class="columns is-gapless is-vcentered is-mobile bg-ownplate-white">
       <div class="column">
-        <div class="button w-48 h-48">
+        <div class="button w-48 h-48" @click="open = true">
           <i class="material-icons s-24 c-ownplate-gray">menu</i>
         </div>
       </div>
@@ -12,6 +12,34 @@
       </div>
       <div class="column"></div>
     </div>
+    <!-- Side Bar -->
+    <b-sidebar
+      type="is-light"
+      :fullheight="fullheight"
+      :fullwidth="fullwidth"
+      :overlay="overlay"
+      :right="right"
+      :open.sync="open"
+    >
+      <div class="align-center m-t-24">
+        <img src="@/assets/images/OwnPlate-Logo-Stack-YellowBlack.svg" width="92" height="104" />
+      </div>
+      <div class="align-center m-t-24">
+        <div class="op-button-medium tertiary w-192">Home</div>
+      </div>
+      <div class="align-center m-t-24">
+        <div class="op-button-small tertiary">About</div>
+      </div>
+      <div class="align-center m-t-24">
+        <div class="op-button-small tertiary">Privacy</div>
+      </div>
+      <div class="align-center m-t-24">
+        <div class="op-button-small tertiary">Terms</div>
+      </div>
+      <div class="align-center m-t-24">
+        <div class="op-button-small tertiary">Sign Out</div>
+      </div>
+    </b-sidebar>
 
     <!-- Main -->
     <div class="main">
@@ -281,8 +309,15 @@ export default {
   name: "SampleUserRestaurant",
   data() {
     return {
-      isCardModalActive: false
+      isCardModalActive: false,
+      open: false,
+      overlay: true,
+      fullheight: true,
+      fullwidth: false,
+      right: false
     };
   }
 };
 </script>
+
+

@@ -181,16 +181,16 @@ html {
 }
 
 // Border Styles
-// .border-primary {
-//   border: 2px solid map-get($op-colors, primary);
-//   box-sizing: border-box;
-// }
-// .button.border-primary:hover {
-//   border: 2px solid map-get($op-colors, primary);
-// }
+.border-primary {
+  border: 2px solid map-get($op-colors, primary);
+  box-sizing: border-box;
+}
+.button.border-primary:hover {
+  border: 2px solid map-get($op-colors, primary);
+}
 
 // OwnPlate Sizes
-$sizes: (0, 4, 8, 16, 18, 24, 32, 36, 48, 64, 96, 128, 160, 192, 256, 440);
+$sizes: (0, 4, 8, 16, 18, 24, 32, 36, 48, 64, 96, 128, 160, 192, 256, 288, 440);
 
 // Margin and Padding Sizes
 $sides: (top, bottom, left, right);
@@ -347,6 +347,28 @@ body,
   }
 }
 
+.op-button-medium {
+  @extend .op-button;
+  @extend .r-64;
+  @extend .p-l-16;
+  @extend .p-r-16;
+  min-width: 128px;
+  @extend .h-64;
+  @extend .t-h6;
+  &.primary {
+    @extend .bg-primary;
+    @extend .c-onprimary;
+  }
+  &.secondary {
+    border: 2px solid map-get($op-colors, primary);
+    @extend .c-primary;
+  }
+  &.tertiary {
+    @extend .bg-form;
+    @extend .c-text-black-medium;
+  }
+}
+
 .control-label {
   @extend .t-body1;
   @extend .c-text-black-medium;
@@ -379,4 +401,16 @@ body,
   .modal-content {
     max-height: calc(100vh - 256px);
   }
+}
+
+// OwnPlate Side Bar
+.b-sidebar .sidebar-background {
+  background-color: map-get($op-colors, dialog-overlay);
+}
+.b-sidebar .sidebar-content.is-light {
+  @extend .bg-surface;
+}
+.b-sidebar .sidebar-content {
+  @extend .d-medium;
+  @extend .w-288;
 }
