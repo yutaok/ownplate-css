@@ -50,6 +50,12 @@
       <div class="button bg-primary d-low h-48 r-48 w-128">
         <span class="t-subtitle1 c-onprimary">Next</span>
       </div>
+      <div class="align-right m-t-8">
+        <div class="op-button-pill bg-form">
+          <i class="material-icons">add</i>
+          <span>Add</span>
+        </div>
+      </div>
 
       <div class="bg-ownplate-gray p-t-32 p-b-32">
         <div class="button border-primary r-48 h-48 w-192">
@@ -63,9 +69,7 @@
       </div>
       <div
         class="inline bg-status-red-bg c-status-red p-l-16 p-r-16 p-t-4 p-b-4 t-subtitle2 r-32"
-      >
-        Order Placed kjyavkuy sgf uvtvciuytv IEW
-      </div>
+      >Order Placed kjyavkuy sgf uvtvciuytv IEW</div>
       <div class="t-h6 c-text-black-medium m-b-8">Your restaurants</div>
       <div class="border-primary r-8 p-t-16 p-b-16 w-440">
         <div class="c-primary t-body1 m-b-8 align-center">
@@ -85,6 +89,6 @@
 
 <script>
 export default {
-  name: "SampleButtonss",
+  name: "SampleButtonss"
 };
 </script>

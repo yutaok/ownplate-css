@@ -1,5 +1,5 @@
 // OwnPlate Colors
-$colors: (
+$op-colors: (
   test: #ff0000,
   ownplate-yellow: #fbc02d,
   ownplate-gray: #616161,
@@ -157,11 +157,11 @@ $colors: (
 }
 
 html {
-  background-color: map-get($colors, background);
+  background-color: map-get($op-colors, background);
 }
 
 // Text and Background Colors
-@each $name, $value in $colors {
+@each $name, $value in $op-colors {
   // Text Colors
   .c-#{$name} {
     color: $value;
@@ -181,13 +181,13 @@ html {
 }
 
 // Border Styles
-.border-primary {
-  border: 2px solid map-get($colors, primary);
-  box-sizing: border-box;
-}
-.button.border-primary:hover {
-  border: 2px solid map-get($colors, primary);
-}
+// .border-primary {
+//   border: 2px solid map-get($op-colors, primary);
+//   box-sizing: border-box;
+// }
+// .button.border-primary:hover {
+//   border: 2px solid map-get($op-colors, primary);
+// }
 
 // OwnPlate Sizes
 $sizes: (0, 4, 8, 16, 18, 24, 32, 36, 48, 64, 96, 128, 160, 192, 256, 440);
@@ -272,7 +272,7 @@ body,
   cursor: pointer;
 }
 .devider {
-  border-top: 1px solid map-get($colors, sattle-black);
+  border-top: 1px solid map-get($op-colors, sattle-black);
 }
 
 // OwnPlate Status
@@ -292,6 +292,7 @@ body,
   display: inline-flex;
   min-height: 36px;
   align-items: center;
+  justify-content: center;
 }
 
 .op-button-text {
@@ -324,9 +325,45 @@ body,
   }
 }
 
+.op-button-small {
+  @extend .op-button;
+  @extend .r-48;
+  @extend .p-l-16;
+  @extend .p-r-16;
+  min-width: 128px;
+  @extend .h-48;
+  @extend .t-subtitle1;
+  &.primary {
+    @extend .bg-primary;
+    @extend .c-onprimary;
+  }
+  &.secondary {
+    border: 2px solid map-get($op-colors, primary);
+    @extend .c-primary;
+  }
+  &.tertiary {
+    @extend .bg-form;
+    @extend .c-text-black-medium;
+  }
+}
+
+.control-label {
+  @extend .t-body1;
+  @extend .c-text-black-medium;
+}
+.textarea {
+  @extend .bg-form;
+  @extend .r-8;
+  padding: 8px 16px;
+  box-shadow: none;
+  border: none;
+  @extend .t-body1;
+  @extend .c-text-black-high;
+}
+
 // OwnPlate Dialog
 .modal-background {
-  background-color: map-get($colors, dialog-overlay);
+  background-color: map-get($op-colors, dialog-overlay);
 }
 .op-dialog {
   max-width: 440px;
@@ -342,11 +379,4 @@ body,
   .modal-content {
     max-height: calc(100vh - 256px);
   }
-}
-
-.b-checkbox.checkbox input[type="checkbox"] + .check {
-  border: 2px solid map-get($colors, text-black-medium);
-}
-.b-checkbox.checkbox input[type="checkbox"]:checked + .check {
-  background-color: map-get($colors, primary);
 }

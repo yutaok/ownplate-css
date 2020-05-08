@@ -67,7 +67,7 @@
                   <i class="material-icons s-48 c-primary">place</i>
                 </div>
 
-                <div class="level m-t-16 m-l-16 m-r-16">
+                <div class="level is-mobile m-t-16 m-l-16 m-r-16">
                   <div class="level-left">
                     <div class="t-body1 c-text-black-high">
                       706 E Pike St
@@ -159,36 +159,44 @@
                         />
                       </div>
                     </div>
-
-                    <div class="m-l-16 m-r-16">
+                    <div class="m-l-16 m-r-16 p-b-16">
                       <hr class="devider m-t-0 m-b-0" />
                       <div class="m-t-16">
                         <div class="t-caption c-text-black-medium">Options</div>
                         <ul>
-                          <li>
-                            <div class="button">
-                              <i class="material-icons">add</i>
-                              <span>Add</span>
-                            </div>
+                          <li class="m-t-8">
+                            <b-checkbox>Vegetarian</b-checkbox>
                           </li>
-                          <li>
-                            <b-checkbox>Basic</b-checkbox>
+                          <li class="m-t-8">
+                            <b-radio v-model="radio" name="name" native-value="Miso Soup">Miso Soup</b-radio>
+                            <b-radio
+                              v-model="radio"
+                              name="name"
+                              native-value="Chiken Soup"
+                            >Chiken Soup</b-radio>
                           </li>
-                          <li>
-                            <b-checkbox>Basic</b-checkbox>
+                          <li class="m-t-8">
+                            <b-checkbox>Gluten Free</b-checkbox>
                           </li>
-                          <li>
-                            <ul>
-                              <li>Miso Soup</li>
-                              <li>Chiken Soup</li>
-                            </ul>
-                          </li>
-                          <li>Gluten Free</li>
                         </ul>
                       </div>
+                      <div class="m-t-16">
+                        <div class="t-caption c-text-black-medium">Special instructions</div>
+                        <div class="m-t-8">
+                          <b-input type="textarea" placeholder="Enter special instructions here."></b-input>
+                          <div
+                            class="t-caption c-text-black-medium m-l-16 m-r-16 m-t-8"
+                          >Please note that special requests may result in price adjustment after your order is processed.</div>
+                        </div>
+                        <div class="m-t-24 align-center">
+                          <div
+                            class="op-button-small tertiary m-r-16"
+                            @click="isCardModalActive = false"
+                          >Close</div>
+                          <div class="op-button-small primary">Add</div>
+                        </div>
+                      </div>
                     </div>
-
-                    <div class="op-button-pill" @click="isCardModalActive = false">Close</div>
                   </div>
                 </div>
               </b-modal>
@@ -237,12 +245,6 @@
                     <div class="t-h6 c-text-black-high">Edamame</div>
                     <div class="t-body1 c-text-black-high m-t-8">$8.00</div>
                   </div>
-                </div>
-              </div>
-              <div class="align-right m-t-8">
-                <div class="op-button-pill bg-form">
-                  <i class="material-icons">add</i>
-                  <span>Add</span>
                 </div>
               </div>
             </div>
