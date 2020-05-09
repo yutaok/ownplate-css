@@ -1,8 +1,6 @@
 # ownplate-css
 
-View [website](https://ownplate-css.firebaseapp.com/).
-
-## Project setup
+View [sample website](https://ownplate-css.firebaseapp.com/).
 
 ## Project setup
 
