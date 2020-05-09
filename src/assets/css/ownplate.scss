@@ -426,10 +426,13 @@ body,
 .modal-background {
   background-color: map-get($op-colors, dialog-overlay);
 }
+.modal .animation-content {
+  margin: 0;
+}
 .op-dialog {
-  max-width: 440px;
-  margin: auto;
   @extend .r-8;
+  @extend .m-l-8;
+  @extend .m-r-8;
   @extend .bg-surface;
   @extend .d-medium;
 }

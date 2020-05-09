@@ -8,7 +8,13 @@
         </div>
       </div>
       <div class="column align-center">
-        <img src="@/assets/images/OwnPlate-Logo-Horizontal-YellowBlack.svg" width="124" height="24" />
+        <router-link to="/">
+          <img
+            src="@/assets/images/OwnPlate-Logo-Horizontal-YellowBlack.svg"
+            width="124"
+            height="24"
+          />
+        </router-link>
       </div>
       <div class="column"></div>
     </div>
@@ -147,7 +153,7 @@
               <div class="t-h6 c-text-black-disabled m-t-24">Most popular</div>
 
               <!-- Menu Item -->
-              <div class="touchable bg-surface r-8 d-low m-t-8" @click="isCardModalActive = true">
+              <div class="touchable bg-surface r-8 d-low m-t-8" @click="itemPopup1 = true">
                 <div class="cols">
                   <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
                     <div class="t-h6 c-text-black-high">Kushikatsu Special Platter</div>
@@ -167,62 +173,61 @@
                 </div>
               </div>
               <!-- Menu Item Popup-->
-              <b-modal :active.sync="isCardModalActive" scroll="keep">
-                <div class="p-l-24 p-r-24">
-                  <div class="op-dialog">
-                    <div class="cols">
-                      <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
-                        <div class="t-h6 c-text-black-high">Kushikatsu Special Platter</div>
-                        <div class="t-body1 c-text-black-high m-t-8">$26.00</div>
-                        <div
-                          class="t-body2 c-text-black-medium m-t-8"
-                        >11 pieces assorted kushikatsu. Served with miso soup and salad.</div>
-                      </div>
-                      <div class="p-r-16 p-t-16 p-b-16">
-                        <img
-                          src="@/assets/contents/r-taku-item-1.png"
-                          width="96"
-                          height="96"
-                          class="is-pulled-right r-4"
-                        />
-                      </div>
+              <b-modal :active.sync="itemPopup1" :width="488" scroll="keep">
+                <div class="op-dialog">
+                  <div class="cols">
+                    <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
+                      <div class="t-h6 c-text-black-high">Kushikatsu Special Platter</div>
+                      <div class="t-body1 c-text-black-high m-t-8">$26.00</div>
+                      <div
+                        class="t-body2 c-text-black-medium m-t-8"
+                      >11 pieces assorted kushikatsu. Served with miso soup and salad.</div>
                     </div>
-                    <div class="m-l-16 m-r-16 p-b-16">
-                      <hr class="devider m-t-0 m-b-0" />
-                      <div class="m-t-16">
-                        <div class="t-caption c-text-black-medium">Options</div>
-                        <ul>
-                          <li class="m-t-8">
-                            <b-checkbox>Vegetarian</b-checkbox>
-                          </li>
-                          <li class="m-t-8">
-                            <b-radio v-model="radio" name="name" native-value="Miso Soup">Miso Soup</b-radio>
-                            <b-radio
-                              v-model="radio"
-                              name="name"
-                              native-value="Chiken Soup"
-                            >Chiken Soup</b-radio>
-                          </li>
-                          <li class="m-t-8">
-                            <b-checkbox>Gluten Free</b-checkbox>
-                          </li>
-                        </ul>
+                    <div class="p-r-16 p-t-16 p-b-16">
+                      <img
+                        src="@/assets/contents/r-taku-item-1.png"
+                        width="96"
+                        height="96"
+                        class="is-pulled-right r-4"
+                      />
+                    </div>
+                  </div>
+                  <div class="m-l-16 m-r-16 p-b-24">
+                    <hr class="devider m-t-0 m-b-0" />
+                    <div class="m-t-16">
+                      <div class="t-caption c-text-black-medium">Options</div>
+                      <ul>
+                        <li class="m-t-8">
+                          <b-checkbox>Vegetarian</b-checkbox>
+                        </li>
+                        <li class="m-t-8">
+                          <b-radio v-model="radio" name="name" native-value="Miso Soup">Miso Soup</b-radio>
+                          <b-radio
+                            v-model="radio"
+                            name="name"
+                            native-value="Chiken Soup"
+                          >Chiken Soup</b-radio>
+                        </li>
+                        <li class="m-t-8">
+                          <b-checkbox>Gluten Free</b-checkbox>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="m-t-16">
+                      <div class="t-caption c-text-black-medium">Special instructions</div>
+                      <div class="m-t-8">
+                        <b-input type="textarea" placeholder="Enter special instructions here."></b-input>
+                        <div
+                          class="t-caption c-text-black-medium m-l-16 m-r-16 m-t-8"
+                        >Please note that special requests may result in price adjustment after your order is processed.</div>
                       </div>
-                      <div class="m-t-16">
-                        <div class="t-caption c-text-black-medium">Special instructions</div>
-                        <div class="m-t-8">
-                          <b-input type="textarea" placeholder="Enter special instructions here."></b-input>
-                          <div
-                            class="t-caption c-text-black-medium m-l-16 m-r-16 m-t-8"
-                          >Please note that special requests may result in price adjustment after your order is processed.</div>
-                        </div>
-                        <div class="m-t-24 align-center">
-                          <div
-                            class="op-button-small tertiary m-r-16"
-                            @click="isCardModalActive = false"
-                          >Close</div>
-                          <div class="op-button-small primary">Add</div>
-                        </div>
+
+                      <!-- Actions -->
+                      <div class="m-t-24 align-center">
+                        <div class="op-button-medium primary w-256" @click="itemPopup1 = false">Add</div>
+                      </div>
+                      <div class="m-t-24 align-center">
+                        <div class="op-button-small tertiary" @click="itemPopup1 = false">Close</div>
                       </div>
                     </div>
                   </div>
@@ -230,7 +235,7 @@
               </b-modal>
 
               <!-- Menu Item -->
-              <div class="touchable bg-surface r-8 d-low m-t-8">
+              <div class="touchable bg-surface r-8 d-low m-t-8" @click="isCardModalActive = true">
                 <div class="cols">
                   <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
                     <div class="t-h6 c-text-black-high">Spicy Eggplant</div>
@@ -284,7 +289,8 @@
       </div>
     </div>
 
-    <div class="op-cartbutton">
+    <!-- Cart Button -->
+    <div class="op-cartbutton" @click="cartPopup = true">
       <div class="level is-mobile w-full p-l-32 p-r-32">
         <div class="level-left">3items</div>
         <div class="level-right">
@@ -293,6 +299,245 @@
         </div>
       </div>
     </div>
+    <!-- Cart Popup-->
+    <b-modal :active.sync="cartPopup" :width="488" scroll="keep">
+      <div class="op-dialog">
+        <div class="m-l-16 m-r-16 p-b-24">
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">Side of Spicy Eggplant</div>
+              <div class="t-caption c-text-black-medium m-t-8 m-l-8">Miso Soup</div>
+              <div
+                class="t-caption c-text-black-medium m-t-8 m-l-8"
+              >Put the dressing on the side. Put the dressing on the side. Put the dressing on the side. Put the dressing on the side.</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$3.00</div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">Edamame</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$3.00</div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">5 pc Kushi Cup</div>
+              <div class="t-caption c-text-black-medium m-t-8 m-l-8">Add special source.</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$9.00</div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">Side of Spicy Eggplant</div>
+              <div class="t-caption c-text-black-medium m-t-8 m-l-8">Miso Soup</div>
+              <div
+                class="t-caption c-text-black-medium m-t-8 m-l-8"
+              >Put the dressing on the side. Put the dressing on the side. Put the dressing on the side. Put the dressing on the side.</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$3.00</div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">Edamame</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$3.00</div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">5 pc Kushi Cup</div>
+              <div class="t-caption c-text-black-medium m-t-8 m-l-8">Add special source.</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$9.00</div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">Side of Spicy Eggplant</div>
+              <div class="t-caption c-text-black-medium m-t-8 m-l-8">Miso Soup</div>
+              <div
+                class="t-caption c-text-black-medium m-t-8 m-l-8"
+              >Put the dressing on the side. Put the dressing on the side. Put the dressing on the side. Put the dressing on the side.</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$3.00</div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">Edamame</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$3.00</div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">5 pc Kushi Cup</div>
+              <div class="t-caption c-text-black-medium m-t-8 m-l-8">Add special source.</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$9.00</div>
+            </div>
+          </div>
+
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">Side of Spicy Eggplant</div>
+              <div class="t-caption c-text-black-medium m-t-8 m-l-8">Miso Soup</div>
+              <div
+                class="t-caption c-text-black-medium m-t-8 m-l-8"
+              >Put the dressing on the side. Put the dressing on the side. Put the dressing on the side. Put the dressing on the side.</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$3.00</div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">Edamame</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$3.00</div>
+            </div>
+          </div>
+          <!-- Item -->
+          <div class="cols p-t-16">
+            <div>
+              <div class="op-button-pill bg-status-red-bg c-status-red w-36 m-r-8">
+                <i class="material-icons">delete_outline</i>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high m-t-4">5 pc Kushi Cup</div>
+              <div class="t-caption c-text-black-medium m-t-8 m-l-8">Add special source.</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high m-t-4 align-right">$9.00</div>
+            </div>
+          </div>
+          <hr class="devider m-t-16 m-b-0" />
+          <!-- Totals -->
+          <div class="cols p-t-16">
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high">Subtotal</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high align-right">$15.00</div>
+            </div>
+          </div>
+          <div class="cols p-t-8">
+            <div class="flex-1">
+              <div class="t-body1 c-text-black-high">Sales Tax</div>
+            </div>
+            <div>
+              <div class="t-body1 c-text-black-high align-right">$1.52</div>
+            </div>
+          </div>
+          <hr class="devider m-t-16 m-b-0" />
+          <div class="cols p-t-16">
+            <div class="flex-1">
+              <div class="t-h6 c-status-green">Total</div>
+            </div>
+            <div>
+              <div class="t-h6 c-status-green align-right">$16.52</div>
+            </div>
+          </div>
+          <!-- Share -->
+          <div class="align-center m-t-24">
+            <div class="op-button-text">
+              <i class="material-icons">launch</i>
+              <span>Share</span>
+            </div>
+          </div>
+          <!-- Actions -->
+          <div class="m-t-24 align-center">
+            <div class="op-button-medium primary w-256">Checkout</div>
+          </div>
+          <div class="m-t-24 align-center">
+            <div class="op-button-small tertiary" @click="cartPopup = false">Close</div>
+          </div>
+        </div>
+      </div>
+    </b-modal>
 
     <!-- Footer -->
     <div class="m-t-24">
@@ -319,7 +564,8 @@ export default {
   name: "SampleUserRestaurant",
   data() {
     return {
-      isCardModalActive: false,
+      itemPopup1: false,
+      cartPopup: false,
       open: false,
       overlay: true,
       fullheight: true,
