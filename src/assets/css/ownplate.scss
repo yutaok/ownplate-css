@@ -355,6 +355,7 @@ body,
   &.primary {
     @extend .bg-primary;
     @extend .c-onprimary;
+    @extend .d-low;
   }
   &.secondary {
     border: 2px solid map-get($op-colors, primary);
@@ -377,6 +378,7 @@ body,
   &.primary {
     @extend .bg-primary;
     @extend .c-onprimary;
+    @extend .d-medium;
   }
   &.secondary {
     border: 2px solid map-get($op-colors, primary);
