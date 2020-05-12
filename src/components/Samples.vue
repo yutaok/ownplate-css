@@ -29,6 +29,11 @@
           <div class="op-button-medium secondary">User - Restaurant page</div>
         </router-link>
       </div>
+      <div class="m-t-24 align-center">
+        <router-link to="/sample-buttons">
+          <div class="op-button-medium secondary">Buttons</div>
+        </router-link>
+      </div>
     </div>
 
     <!-- Footer -->

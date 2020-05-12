@@ -1,6 +1,66 @@
 <template>
   <div>
-    hello buttons smaples
+    <!-- <b-button
+      tag="nuxt-link"
+      :to="'/admin/restaurants/' + restaurantid + '/orders'"
+      :style="{'margin-right': 'auto', height: '40px'}"
+      type="is-primary"
+      class="counter-button"
+      expanded
+      rounded
+      contained
+    >{{ $tc('admin.incompleteOrders', numberOfOrders, {count:numberOfOrders}) }}</b-button>-->
+
+    <div class="op-button-medium primary w-256">Add</div>
+
+    <router-link to="/">
+      <img src="@/assets/images/OwnPlate-Logo-Horizontal-YellowBlack.svg" width="124" height="24" />
+    </router-link>
+
+    <!-- Add New Restaurant Button with Buefy button component -->
+    <!-- <b-button
+      style="margin-right:auto"
+      type="is-primary"
+      class="counter-button"
+      expanded
+      rounded
+      @click="handleNew"
+      :loading="isCreating"
+    >{{$t('admin.addNewRestaurant')}}</b-button>-->
+
+    <!-- A button div with OwnPlate-CSS -->
+    <div class="op-button-medium primary w-256">Add New Restaurant</div>
+
+    <!-- Is this how implement without Buefy component? -->
+    <!-- <div class="op-button-medium primary w-256" @click="handleNew">{{$t('admin.addNewRestaurant')}}</div> -->
+
+    <!-- ____________________________________________________________ -->
+
+    <!-- Link to external website with Buefy button component -->
+    <!-- <b-button
+      tag="a"
+      target="_blank"
+      href="https://gluepass.jp/g/ownplatejp/pages"
+      style="margin-right:auto;min-width: 30%;"
+      type="is-primary"
+      class="counter-button"
+      rounded
+      outlined
+    >{{$t("admin.userManual")}}</b-button>-->
+
+    <!-- A button div with OwnPlate-CSS -->
+    <div class="op-button-medium primary w-256">User Manual</div>
+
+    <!-- Is this how implement without Buefy component? -->
+    <!-- <a href="https://gluepass.jp/g/ownplatejp/pages" target="_blank">
+      <div class="op-button-medium primary w-256">aaaaaaaaaa{{$t("admin.userManual")}}</div>
+    </a>-->
+
+    <!-- ____________________________________________________________ -->
+
+    <!-- ____________________________________________________________ -->
+
+    <div>hello buttons smaples</div>
     <i class="material-icons s-18">face</i>
     <i class="material-icons s-24">face</i>
     <i class="material-icons s-36">face</i>
@@ -89,6 +149,6 @@
 
 <script>
 export default {
-  name: "SampleButtonss"
+  name: "SampleButtons"
 };
 </script>
