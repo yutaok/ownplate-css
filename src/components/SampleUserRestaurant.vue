@@ -49,132 +49,112 @@
 
     <!-- Main -->
     <div class="main">
-      <div class="columns is-gapless">
-        <!-- Left Gap -->
-        <div class="column is-narrow w-24"></div>
+      <div class="contents">
+        <div class="columns is-gapless">
+          <!-- Left Gap -->
+          <div class="column is-narrow w-24"></div>
 
-        <!-- Left Column -->
-        <div class="column">
-          <!-- Restaurant Cover Photo -->
-          <div class="columns is-gapless">
-            <div class="column is-narrow w-24"></div>
-            <div class="column">
-              <div class="is-hidden-mobile h-24"></div>
-              <div class="bg-form h-192">
-                <img
-                  src="@/assets/contents/r-taku-cover.png"
-                  class="h-192 w-full cover is-hidden-tablet"
-                />
-                <img
-                  src="@/assets/contents/r-taku-cover.png"
-                  class="h-192 w-full cover r-4 is-hidden-mobile"
-                />
-              </div>
-            </div>
-            <div class="column is-narrow w-24"></div>
-          </div>
-
-          <!-- Restaurant Details -->
-          <div class="m-l-24 m-r-24">
-            <div class="m-t-24 align-center">
-              <img src="@/assets/contents/r-taku-profile.png" class="h-64 r-64 cover" />
-            </div>
-
-            <div class="m-t-8 align-center t-h6 c-text-black-high">Taku Seattle</div>
-
-            <div class="m-t-8 align-center">
-              <div class="op-button-text m-r-8">
-                <i class="material-icons">launch</i>
-                <span>Share</span>
-              </div>
-              <div class="op-button-text">
-                <i class="material-icons">rate_review</i>
-                <span>Write Review</span>
-              </div>
-            </div>
-
-            <div class="m-t-24">
-              <div class="t-h6 c-text-black-disabled">Restaurant Details</div>
-
-              <div class="bg-surface r-8 d-low m-t-8">
-                <div class="button h-160 w-full bg-form r-8 r-b-0">
-                  <i class="material-icons s-48 c-primary">place</i>
+          <!-- Left Column -->
+          <div class="column">
+            <!-- Restaurant Cover Photo -->
+            <div class="columns is-gapless">
+              <div class="column is-narrow w-24"></div>
+              <div class="column">
+                <div class="is-hidden-mobile h-24"></div>
+                <div class="bg-form h-192">
+                  <img
+                    src="@/assets/contents/r-taku-cover.png"
+                    class="h-192 w-full cover is-hidden-tablet"
+                  />
+                  <img
+                    src="@/assets/contents/r-taku-cover.png"
+                    class="h-192 w-full cover r-4 is-hidden-mobile"
+                  />
                 </div>
+              </div>
+              <div class="column is-narrow w-24"></div>
+            </div>
 
-                <div class="level is-mobile m-t-16 m-l-16 m-r-16">
-                  <div class="level-left">
-                    <div class="t-body1 c-text-black-high">
-                      706 E Pike St
-                      <br />Seattle, WA 98122
+            <!-- Restaurant Details -->
+            <div class="m-l-24 m-r-24">
+              <div class="m-t-24 align-center">
+                <img src="@/assets/contents/r-taku-profile.png" class="h-64 r-64 cover" />
+              </div>
+
+              <div class="m-t-8 align-center t-h6 c-text-black-high">Taku Seattle</div>
+
+              <div class="m-t-8 align-center">
+                <div class="op-button-text m-r-8">
+                  <i class="material-icons">launch</i>
+                  <span>Share</span>
+                </div>
+                <div class="op-button-text">
+                  <i class="material-icons">rate_review</i>
+                  <span>Write Review</span>
+                </div>
+              </div>
+
+              <div class="m-t-24">
+                <div class="t-h6 c-text-black-disabled">Restaurant Details</div>
+
+                <div class="bg-surface r-8 d-low m-t-8">
+                  <div class="button h-160 w-full bg-form r-8 r-b-0">
+                    <i class="material-icons s-48 c-primary">place</i>
+                  </div>
+
+                  <div class="level is-mobile m-t-16 m-l-16 m-r-16">
+                    <div class="level-left">
+                      <div class="t-body1 c-text-black-high">
+                        706 E Pike St
+                        <br />Seattle, WA 98122
+                      </div>
+                    </div>
+                    <div class="level-right">
+                      <div class="op-button-text">
+                        <i class="material-icons">file_copy</i>
+                        <span>Copy</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="level-right">
+
+                  <div class="m-t-8 m-l-16 m-r-16">
                     <div class="op-button-text">
-                      <i class="material-icons">file_copy</i>
-                      <span>Copy</span>
+                      <i class="material-icons">phone</i>
+                      <span>(456) 789-0123</span>
                     </div>
                   </div>
-                </div>
 
-                <div class="m-t-8 m-l-16 m-r-16">
-                  <div class="op-button-text">
-                    <i class="material-icons">phone</i>
-                    <span>(456) 789-0123</span>
+                  <div class="m-t-8 m-l-16 m-r-16">
+                    <div class="op-button-text">
+                      <i class="material-icons">language</i>
+                      <span>takuseattle.com</span>
+                    </div>
                   </div>
-                </div>
 
-                <div class="m-t-8 m-l-16 m-r-16">
-                  <div class="op-button-text">
-                    <i class="material-icons">language</i>
-                    <span>takuseattle.com</span>
+                  <div class="align-center">
+                    <div class="op-status c-status-green bg-status-green-bg m-t-16">Open Now</div>
+                    <div class="p-t-8 t-caption c-status-green">Tue 4:30 AM - 9:00 PM</div>
                   </div>
-                </div>
 
-                <div class="align-center">
-                  <div class="op-status c-status-green bg-status-green-bg m-t-16">Open Now</div>
-                  <div class="p-t-8 t-caption c-status-green">Tue 4:30 AM - 9:00 PM</div>
-                </div>
-
-                <div class="align-center">
-                  <div class="op-button-text m-t-8 m-b-16">
-                    <span>View All Hours</span>
+                  <div class="align-center">
+                    <div class="op-button-text m-t-8 m-b-16">
+                      <span>View All Hours</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Right Column -->
-        <div class="column">
-          <div class="m-l-24 m-r-24">
-            <div class="m-t-24">
-              <!-- Menu Category -->
-              <div class="t-h6 c-text-black-disabled m-t-24">Most popular</div>
+          <!-- Right Column -->
+          <div class="column">
+            <div class="m-l-24 m-r-24">
+              <div class="m-t-24">
+                <!-- Menu Category -->
+                <div class="t-h6 c-text-black-disabled m-t-24">Most popular</div>
 
-              <!-- Menu Item -->
-              <div class="touchable bg-surface r-8 d-low m-t-8" @click="itemPopup1 = true">
-                <div class="cols">
-                  <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
-                    <div class="t-h6 c-text-black-high">Kushikatsu Special Platter</div>
-                    <div class="t-body1 c-text-black-high m-t-8">$26.00</div>
-                    <div
-                      class="t-body2 c-text-black-medium m-t-8"
-                    >11 pieces assorted kushikatsu. Served with miso soup and salad.</div>
-                  </div>
-                  <div class="p-r-16 p-t-16 p-b-16">
-                    <img
-                      src="@/assets/contents/r-taku-item-1.png"
-                      width="96"
-                      height="96"
-                      class="is-pulled-right r-4"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!-- Menu Item Popup-->
-              <b-modal :active.sync="itemPopup1" :width="488" scroll="keep">
-                <div class="op-dialog">
+                <!-- Menu Item -->
+                <div class="touchable bg-surface r-8 d-low m-t-8" @click="itemPopup1 = true">
                   <div class="cols">
                     <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
                       <div class="t-h6 c-text-black-high">Kushikatsu Special Platter</div>
@@ -192,100 +172,125 @@
                       />
                     </div>
                   </div>
-                  <div class="m-l-16 m-r-16 p-b-24">
-                    <hr class="devider m-t-0 m-b-0" />
-                    <div class="m-t-16">
-                      <div class="t-caption c-text-black-medium">Options</div>
-                      <ul>
-                        <li class="m-t-8">
-                          <b-checkbox>Vegetarian</b-checkbox>
-                        </li>
-                        <li class="m-t-8">
-                          <b-radio v-model="radio" name="name" native-value="Miso Soup">Miso Soup</b-radio>
-                          <b-radio
-                            v-model="radio"
-                            name="name"
-                            native-value="Chiken Soup"
-                          >Chiken Soup</b-radio>
-                        </li>
-                        <li class="m-t-8">
-                          <b-checkbox>Gluten Free</b-checkbox>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="m-t-16">
-                      <div class="t-caption c-text-black-medium">Special instructions</div>
-                      <div class="m-t-8">
-                        <b-input type="textarea" placeholder="Enter special instructions here."></b-input>
+                </div>
+                <!-- Menu Item Popup-->
+                <b-modal :active.sync="itemPopup1" :width="488" scroll="keep">
+                  <div class="op-dialog">
+                    <div class="cols">
+                      <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
+                        <div class="t-h6 c-text-black-high">Kushikatsu Special Platter</div>
+                        <div class="t-body1 c-text-black-high m-t-8">$26.00</div>
                         <div
-                          class="t-caption c-text-black-medium m-l-16 m-r-16 m-t-8"
-                        >Please note that special requests may result in price adjustment after your order is processed.</div>
+                          class="t-body2 c-text-black-medium m-t-8"
+                        >11 pieces assorted kushikatsu. Served with miso soup and salad.</div>
                       </div>
+                      <div class="p-r-16 p-t-16 p-b-16">
+                        <img
+                          src="@/assets/contents/r-taku-item-1.png"
+                          width="96"
+                          height="96"
+                          class="is-pulled-right r-4"
+                        />
+                      </div>
+                    </div>
+                    <div class="m-l-16 m-r-16 p-b-24">
+                      <hr class="devider m-t-0 m-b-0" />
+                      <div class="m-t-16">
+                        <div class="t-caption c-text-black-medium">Options</div>
+                        <ul>
+                          <li class="m-t-8">
+                            <b-checkbox>Vegetarian</b-checkbox>
+                          </li>
+                          <li class="m-t-8">
+                            <b-radio v-model="radio" name="name" native-value="Miso Soup">Miso Soup</b-radio>
+                            <b-radio
+                              v-model="radio"
+                              name="name"
+                              native-value="Chiken Soup"
+                            >Chiken Soup</b-radio>
+                          </li>
+                          <li class="m-t-8">
+                            <b-checkbox>Gluten Free</b-checkbox>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="m-t-16">
+                        <div class="t-caption c-text-black-medium">Special instructions</div>
+                        <div class="m-t-8">
+                          <b-input type="textarea" placeholder="Enter special instructions here."></b-input>
+                          <div
+                            class="t-caption c-text-black-medium m-l-16 m-r-16 m-t-8"
+                          >Please note that special requests may result in price adjustment after your order is processed.</div>
+                        </div>
 
-                      <!-- Actions -->
-                      <div class="m-t-24 align-center">
-                        <div class="op-button-medium primary w-256" @click="itemPopup1 = false">Add</div>
-                      </div>
-                      <div class="m-t-24 align-center">
-                        <div class="op-button-small tertiary" @click="itemPopup1 = false">Close</div>
+                        <!-- Actions -->
+                        <div class="m-t-24 align-center">
+                          <div
+                            class="op-button-medium primary w-256"
+                            @click="itemPopup1 = false"
+                          >Add</div>
+                        </div>
+                        <div class="m-t-24 align-center">
+                          <div class="op-button-small tertiary" @click="itemPopup1 = false">Close</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </b-modal>
+                </b-modal>
 
-              <!-- Menu Item -->
-              <div class="touchable bg-surface r-8 d-low m-t-8" @click="isCardModalActive = true">
-                <div class="cols">
-                  <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
-                    <div class="t-h6 c-text-black-high">Spicy Eggplant</div>
-                    <div class="t-body1 c-text-black-high m-t-8">$8.00</div>
-                    <div
-                      class="t-body2 c-text-black-medium m-t-8"
-                    >11 pieces assorted kushikatsu. Served with miso soup and salad.</div>
-                  </div>
-                  <div class="p-r-16 p-t-16 p-b-16">
-                    <img
-                      src="@/assets/contents/r-taku-item-2.png"
-                      width="96"
-                      height="96"
-                      class="is-pulled-right r-4"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <!-- Menu Category -->
-              <div class="t-h6 c-text-black-disabled m-t-24">Appetizers</div>
-
-              <!-- Menu Item -->
-              <div class="touchable bg-surface r-8 d-low m-t-8">
-                <div class="cols">
-                  <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
-                    <div class="t-h6 c-text-black-high">Spicy Eggplant</div>
-                    <div class="t-body1 c-text-black-high m-t-8">$8.00</div>
-                    <div
-                      class="t-body2 c-text-black-medium m-t-8"
-                    >11 pieces assorted kushikatsu. Served with miso soup and salad.</div>
+                <!-- Menu Item -->
+                <div class="touchable bg-surface r-8 d-low m-t-8" @click="isCardModalActive = true">
+                  <div class="cols">
+                    <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
+                      <div class="t-h6 c-text-black-high">Spicy Eggplant</div>
+                      <div class="t-body1 c-text-black-high m-t-8">$8.00</div>
+                      <div
+                        class="t-body2 c-text-black-medium m-t-8"
+                      >11 pieces assorted kushikatsu. Served with miso soup and salad.</div>
+                    </div>
+                    <div class="p-r-16 p-t-16 p-b-16">
+                      <img
+                        src="@/assets/contents/r-taku-item-2.png"
+                        width="96"
+                        height="96"
+                        class="is-pulled-right r-4"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Menu Item -->
-              <div class="touchable bg-surface r-8 d-low m-t-8">
-                <div class="cols">
-                  <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
-                    <div class="t-h6 c-text-black-high">Edamame</div>
-                    <div class="t-body1 c-text-black-high m-t-8">$8.00</div>
+                <!-- Menu Category -->
+                <div class="t-h6 c-text-black-disabled m-t-24">Appetizers</div>
+
+                <!-- Menu Item -->
+                <div class="touchable bg-surface r-8 d-low m-t-8">
+                  <div class="cols">
+                    <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
+                      <div class="t-h6 c-text-black-high">Spicy Eggplant</div>
+                      <div class="t-body1 c-text-black-high m-t-8">$8.00</div>
+                      <div
+                        class="t-body2 c-text-black-medium m-t-8"
+                      >11 pieces assorted kushikatsu. Served with miso soup and salad.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Menu Item -->
+                <div class="touchable bg-surface r-8 d-low m-t-8">
+                  <div class="cols">
+                    <div class="flex-1 p-l-16 p-r-16 p-t-16 p-b-16">
+                      <div class="t-h6 c-text-black-high">Edamame</div>
+                      <div class="t-body1 c-text-black-high m-t-8">$8.00</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Right Gap -->
-        <div class="column is-narrow w-24"></div>
+          <!-- Right Gap -->
+          <div class="column is-narrow w-24"></div>
+        </div>
       </div>
     </div>
 
