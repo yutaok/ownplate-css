@@ -295,7 +295,8 @@
     </div>
 
     <!-- Cart Button -->
-    <div class="op-cartbutton" @click="cartPopup = true">
+    <!-- Original -->
+    <!-- <div class="op-cartbutton" @click="cartPopup = true">
       <div class="level is-mobile w-full p-l-32 p-r-32">
         <div class="level-left">3items</div>
         <div class="level-right">
@@ -303,7 +304,35 @@
           <i class="material-icons">shopping_cart</i>
         </div>
       </div>
-    </div>
+    </div>-->
+
+    <b-button class="op-cartbutton" @click="cartPopup = true">
+      <div class="level is-mobile w-full p-l-32 p-r-32">
+        <div class="level-left">3items</div>
+        <div class="level-right">
+          <span class="m-r-8">View Cart</span>
+          <i class="material-icons">shopping_cart</i>
+        </div>
+      </div>
+    </b-button>
+
+    <!-- Upstream -->
+    <!-- <b-button
+      class="op-cartbutton"
+      v-if="0 != totalCount"
+      :loading="isCheckingOut"
+      :disabled="isCheckingOut"
+      @click="handleCheckOut"
+    >
+      <div class="level is-mobile w-full p-l-32 p-r-32">
+        <div class="level-left">{{$tc('sitemenu.orderCounter', totalCount, {count: totalCount})}}</div>
+        <div class="level-right">
+          <span class="m-r-8">{{$t('sitemenu.checkout')}}</span>
+          <i class="material-icons">shopping_cart</i>
+        </div>
+      </div>
+    </b-button>-->
+
     <!-- Cart Popup-->
     <b-modal :active.sync="cartPopup" :width="488" scroll="keep">
       <div class="op-dialog">
